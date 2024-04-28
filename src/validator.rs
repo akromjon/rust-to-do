@@ -31,11 +31,12 @@ pub fn validate() -> Result<Command, i32> {
         }
 
         "list" => Ok(Command {
-            command: "add".to_string(),
+            command: "list".to_string(),
             description: "".to_string(),
         }),
         _ => {
-            process::exit(0);            
+            display();
+            process::exit(0);
         }
     };
 
